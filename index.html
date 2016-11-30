@@ -1,0 +1,46 @@
+<!DOCTYPE html><!--[if gte IE 9]><html lang="es" dir="ltr" class="ie9"><![endif]-->
+<!--[if !IE]><!--><html lang="es" dir="ltr"><!--<![endif]-->
+<head>
+  <!-- Título página-->
+  <title>Framework de desarrollo front-end</title>
+  <!-- Etiquetas META-->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/><!-- build:css css/style.min.css -->
+  <!-- Archivos CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  <!-- Fin archivos CSS--><!-- endbuild -->
+  <!-- Fin CSS Y SCRIPT compatibilidad IE--><!-- build:js js/main.min.js -->
+  <!-- Archivos JS-->
+  <script type="text/javascript" src="js/vendor/angular.js"></script>
+  <script type="text/javascript" src="js/vendor/angular-route.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- Fin rchivos JS--><!-- endbuild -->
+</head>
+<body data-ng-app="app">
+  <div data-ng-controller="MainCtrl as main">
+    <div class="acr-background">
+      <div class="wrapper">
+        <header class="acr-header">
+          <div class="acr-header__left"><a href="#index" title="index" class="acr-header__logo">TelCom</a></div>
+          <div class="acr-header__right"><a href="#nolink"><img src="assets/img/icons/icon-shop.svg" class="acr-header__icon"/></a><a href="#nolink"><img src="assets/img/icons/icon-heart.svg" class="acr-header__icon"/></a><a href="#nolink"><img src="assets/img/icons/icon-menu.svg" class="acr-header__icon"/></a></div>
+        </header>
+        <div class="acr-welcome"><span class="acr-welcome__title">Hola,</span><span class="acr-welcome__title">Juanra Pol !</span><span class="acr-welcome__subtitle">Queremos ayudarte</span><span class="acr-welcome__subtitle">a cumplir tu sueño...</span></div>
+        <div class="acr-process">
+          <h3 class="acr-process__title">Móvil nuevo + datos 4G</h3>
+          <div class="acr-process__left"><span class="acr-process__price">{{main.price}}</span><span class="acr-process__date">€/mes</span></div>
+          <div class="acr-process__right"><a href="#nolink" title="Contratar" class="acr-process__button">Contratar</a></div>
+        </div>
+      </div>
+      <div class="acr-process-step">
+        <div class="acr-process-step__1"><img src="assets/img/contents/nuevo-movil.jpg" alt="Primer paso"></div>
+        <div class="acr-process-step__2"><img src="assets/img/contents/navega.jpg" alt="Primer paso"></div>
+        <div data-ng-show="main.step&gt;2" data-ng-click="main.nextStep()" class="acr-process-step__3"><img src="assets/img/contents/hogar.jpg" alt="Segundo paso" data-ng-show="main.step==3 || main.step&gt;5"><img src="assets/img/contents/hogar120.jpg" alt="Segundo paso" data-ng-show="main.step==4"><img src="assets/img/contents/hogar200.jpg" alt="Segundo paso" data-ng-show="main.step==5"></div>
+        <div data-ng-show="main.step&gt;7" data-ng-click="main.nextStep()" class="acr-process-step__3"><img src="assets/img/contents/entretenimiento.jpg" alt="Tercer paso"></div>
+      </div>
+      <div class="acr-process-step__bottom"><img src="assets/img/contents/buttons.jpg" alt="Botones"></div>
+    </div>
+    <div data-ng-click="main.openAssistant($event)" class="acr-assistant">
+      <div><img src="assets/img/contents/asistente1.png" alt="Asistente" data-ng-show="main.step&lt;6"><img src="assets/img/contents/asistente.png" alt="Asistente" data-ng-show="main.step&gt;=6 &amp;&amp; main.step&lt;9"><img src="assets/img/contents/asistente3.png" alt="Asistente" data-ng-show="main.step&gt;=9"></div>
+    </div>
+  </div>
+</body></html>
