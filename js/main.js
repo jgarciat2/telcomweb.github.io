@@ -10,8 +10,9 @@ app.config(function ($routeProvider) {
 });
 
 app.controller("MainCtrl", function ($scope) {
-	this.price = 44;
-	this.step  = 1;
+	this.price     = 44;
+	this.textPrice = "Móvil nuevo + datos 4G";
+	this.step      = 1;
 
 	this.openAssistant = function (e) {
 		if (this.step != 9) {
@@ -34,10 +35,18 @@ app.controller("MainCtrl", function ($scope) {
 	};
 
 	this.checkPrice = function () {
-		if (this.step == 3 || this.step==4){
-			this.price = 64;
-		}else if (this.step>=5 ){
-			this.price = 72;
+		if (this.step == 3) {
+			this.price     = 72;
+			this.textPrice = "Móvil nuevo + datos 4G + fibra 200 Mb"
+		} else if (this.step == 4) {
+			this.price     = 64;
+			this.textPrice = "Móvil nuevo + datos 4G + fibra 120 Mb"
+		} else if (this.step >= 5) {
+			this.price     = 72;
+			this.textPrice = "Móvil nuevo + datos 4G + fibra 200 Mb"
+		}
+		if (this.step >= 8) {
+			this.textPrice = "Móvil nuevo + datos 4G + fibra 200 Mb + TV"
 		}
 	}
 });

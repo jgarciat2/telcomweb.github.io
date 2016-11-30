@@ -297,26 +297,29 @@ h6,.acr-heading-6 {
 }
 
 .acr-welcome__title {
-  font-size: 43.789px;
-  font-size: 2.73687rem;
+  font-size: 55px;
+  font-size: 3.4375rem;
   font-family: soho--light;
   display: block;
   line-height: 100%;
 }
 
 .acr-welcome__subtitle {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 20.5px;
+  font-size: 1.28125rem;
   display: block;
-  margin-top: 10px;
-  margin-top: 0.625rem;
   font-family: soho--medium;
-  line-height: 100%;
+  line-height: 120%;
+}
+
+.acr-welcome__subtitle--first {
+  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .acr-process {
-  margin-top: 95px;
-  margin-top: 5.9375rem;
+  margin-top: 120px;
+  margin-top: 7.5rem;
   color: black;
 }
 
@@ -327,18 +330,19 @@ h6,.acr-heading-6 {
 }
 
 .acr-process__title {
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 15.5px;
+  font-size: 0.96875rem;
   display: block;
   color: black;
   font-family: soho--bold;
-  margin-bottom: 10px;
-  margin-bottom: 0.625rem;
+  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
+  text-transform: none;
 }
 
 .acr-process__price {
-  font-size: 43.789px;
-  font-size: 2.73687rem;
+  font-size: 55px;
+  font-size: 3.4375rem;
   color: black;
   font-family: soho--light;
   line-height: 100%;
@@ -354,16 +358,16 @@ h6,.acr-heading-6 {
 }
 
 .acr-process__button {
-  font-size: 12.5px;
-  font-size: 0.78125rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   padding: 15px 20px;
   padding: 0.9375rem 1.25rem;
   background: linear-gradient(to right, #26c4c6, #8950df);
   border-radius: 0.9375rem;
   display: inline-block;
   text-align: center;
-  width: 100px;
-  width: 6.25rem;
+  width: 120px;
+  width: 7.5rem;
 }
 
 .acr-process__button:hover,.acr-process__button:focus,.acr-process__button:active {
@@ -395,14 +399,14 @@ h6,.acr-heading-6 {
 
 .acr-assistant {
   position: fixed;
-  top: calc(100% - 3.75rem);
+  top: calc(100% - 3.4375rem);
   left: 0;
   cursor: pointer;
   transition: transform .5s ease-in-out;
 }
 
 .acr-assistant--open {
-  transform: translateY(calc(-100% + 3.75rem));
+  transform: translateY(calc(-100% + 3.4375rem));
 }
 
 .acr-assistant--semi-open {
